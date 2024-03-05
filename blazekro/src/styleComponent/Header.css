@@ -1,0 +1,31 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    color: red;
+    font-weight: 900;
+    margin: 0 1rem;
+    border-bottom: 2px solid red;
+    font-family: sans-serif;
+}
+.menu-container li{
+    list-style: none;
+    font-size: 1rem;
+    color: red;
+    background: white;
+    text-decoration: none;
+}
+
+.menu-icon{
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+.signin{
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}

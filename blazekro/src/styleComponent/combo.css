@@ -1,0 +1,67 @@
+.combo-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 5rem;
+    max-height: 800px;
+    font-family: sans-serif;
+    position: relative;
+    width: 100%;
+    padding: 2rem 0;
+}
+.combos,.topSelling{
+    width: 48%;
+    background: rgb(255, 253, 253);
+    background: rgb(255, 234, 238);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.combos h1,.topSelling h1{
+    text-align: center;
+}
+.combo-image-container,.top-selling-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+.combo-image-container img, .top-selling-image img{
+    width: 320px;
+}
+.combo-product1{
+   position: relative;
+}
+.link-shop{
+    position: absolute;
+    bottom: 1rem;
+    text-decoration: none;
+    color: black;
+    background: white;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-radius: 20px;
+}
+
+@media(max-width : 1400px){
+    .combos,.topSelling{
+        width: 95%;
+    }
+    .combo-image-container img, .top-selling-image img{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+
+@media(max-width : 520px){
+    .combos,.topSelling{
+        width: 100%;
+    }
+    .combo-image-container img, .top-selling-image img{
+        width: 140px;
+    }
+}

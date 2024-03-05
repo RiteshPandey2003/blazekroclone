@@ -1,0 +1,85 @@
+/* onlyforou.css */
+
+.onlyforyou {
+    padding: 20px;
+    font-family: sans-serif;
+    margin-top: 5rem;
+    padding: 0 1rem;
+  }
+  
+  .onlyforyou h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .onlyforyou-productContainer {
+    max-height: 600px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+    gap: 20px;
+    padding: 1rem 0;
+  }
+  .onlyforyou-productContainer::-webkit-scrollbar{
+     display: none;
+  }
+  .onlyforyou-productbox {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    min-width: 320px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  
+  .onlyforyou-productbox:hover {
+    transform: translateY(-5px);
+  }
+  .onlyforyou-productbox:-webkit-scrollbar{
+    display: none;
+  }
+  .onlyforyou-productImage {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .onlyforyou-discriptionsection {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+ 
+  
+  .onlyforyou-discriptionsection h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .onlyforyou-discriptionsection button {
+    background-color: #ff902e;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+  }
+  
+  .onlyforyou-discriptionsection button:hover {
+    background-color: white;
+    color: #ff902e;
+    border: 0.5px solid #ff902e;
+  }
+  
+  .onlyforyou-discriptionsection p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Media Queries */
+ 
+  
