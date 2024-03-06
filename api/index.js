@@ -1,3 +1,4 @@
+
 import cookieParser from "cookie-parser";
 import express from "express";
 import cors from "cors";
@@ -10,15 +11,23 @@ import path from 'path';
 
 dotenv.config();
 
-const __dirname = path.resolve();
+const __dirname = path.resolve()
 const app = express();
 const port = process.env.PORT || 8001;
 
-// Allow requests from any origin (for testing purposes)
+// Dynamic CORS Configuration
 app.use(cors({
-    origin: 'https://blazekroclone.onrender.com',
-    credentials: true,
-  }));
+  origin: function (origin, callback) {
+    const allowedOrigins = ['http://localhost:5173', 'https://blazekroclone.onrender.com'];
+
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+}));
 
 app.use(express.json());
 app.use(cookieParser());
