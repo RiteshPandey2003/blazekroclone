@@ -10,17 +10,15 @@ import path from 'path';
 
 dotenv.config();
 
-const __dirname = path.resolve()
+const __dirname = path.resolve();
 const app = express();
 const port = process.env.PORT || 8001;
 
-// Allow requests from any origin (not recommended for production)
+// Allow requests from any origin (for testing purposes)
 app.use(cors({
-  origin: '*',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204, // Some legacy browsers choke on 204
-}));
+    origin: 'https://blazekroclone.onrender.com',
+    credentials: true,
+  }));
 
 app.use(express.json());
 app.use(cookieParser());
