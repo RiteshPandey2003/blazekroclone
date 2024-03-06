@@ -14,9 +14,17 @@ const __dirname = path.resolve()
 const app = express();
 const port = process.env.PORT || 8001;
 
-// Allow requests from any origin (not recommended for production)
+// Dynamic CORS Configuration
 app.use(cors({
-  origin: '*',
+  origin: function (origin, callback) {
+    const allowedOrigins = ['*'];
+
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
 }));
 
