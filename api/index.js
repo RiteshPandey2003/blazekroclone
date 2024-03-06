@@ -17,7 +17,7 @@ const port = process.env.PORT || 8001;
 // Dynamic CORS Configuration
 app.use(cors({
   origin: function (origin, callback) {
-    const allowedOrigins = ['http://localhost:5173', 'https://blazekroclone.onrender.com'];
+    const allowedOrigins = ['*'];
 
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
