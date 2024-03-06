@@ -14,14 +14,19 @@ const __dirname = path.resolve()
 const app = express();
 const port = process.env.PORT || 8001;
 
-// CORS Configuration
-app.use(cors());
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://blazekroclone.onrender.com");
-    res.header("Access-Control-Allow-Methods", ["GET", "HEAD", "OPTIONS", "PUT", "POST", "DELETE"]);
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-    next();
-});
+// Dynamic CORS Configuration
+app.use(cors({
+  origin: function (origin, callback) {
+    const allowedOrigins = ['http://localhost:5173', 'https://blazekroclone.onrender.com'];
+
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+}));
 
 app.use(express.json());
 app.use(cookieParser());

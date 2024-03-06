@@ -5,7 +5,6 @@ export const signinApi = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:8001/",
-    credentials: "include", // Include credentials at the base query level
   }),
   endpoints: (builder) => ({
     getposts: builder.query({
