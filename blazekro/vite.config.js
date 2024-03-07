@@ -11,6 +11,8 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
+    https :true
   },
   plugins: [react()],
 });
+
