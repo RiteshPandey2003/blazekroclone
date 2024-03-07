@@ -7,7 +7,6 @@ import userRoute from "./routes/userRoute.js";
 import productRoute from "./routes/productRoute.js";
 import cartRoute from "./routes/cartRoute.js";
 import path from 'path';
-import cors from "cors"
 
 
 dotenv.config();
@@ -16,10 +15,7 @@ const __dirname = path.resolve()
 const app = express();
 const port = process.env.PORT || 8001;
 
-app.use(cors({
-  origin: '*',
-  credentials: true,
-}));
+
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static("uploads"));
